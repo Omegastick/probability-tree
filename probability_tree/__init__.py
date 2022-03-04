@@ -1,5 +1,5 @@
 from .node import BranchNode, LeafNode, Node
-from .parsers import parse_dict
+from .parser import parse_dict
 
 __all__ = [
     "BranchNode",
