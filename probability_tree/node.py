@@ -9,7 +9,10 @@ class Node(Protocol):
 
     name: str
     probability: float
-    conclusion: float
+
+    @property
+    def conclusion(self) -> float:
+        ...
 
 
 @dataclass
