@@ -22,8 +22,8 @@ class LeafNode:
     """
 
     name: str
-    probability: float
     conclusion: float
+    probability: float = 1.0
 
 
 @dataclass
@@ -33,8 +33,8 @@ class BranchNode:
     """
 
     name: str
-    probability: float
     children: List[Node]
+    probability: float = 1.0
 
     @property
     def conclusion(self) -> float:

@@ -10,7 +10,7 @@ def parse_dict(input: dict) -> Node:
             return LeafNode(name=input["name"], probability=input["probability"], conclusion=input["conclusion"])
         return BranchNode(
             name=input["name"],
-            probability=input["probability"],
+            probability=input.get("probability", 1.0),
             children=[parse_dict(child) for child in input["children"]],
         )
     except KeyError:
